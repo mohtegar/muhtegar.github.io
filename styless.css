@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+}
+:root {
+   --main-color: #008148;
+   --second-color: #1e3932;
+}
+
+section {
+    padding: 50px 10%;
+}
+::selection {
+  color: #ffff;
+  background: var(--main-color);
+}
+nav {
+  overflow-x: visible;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0px;
+  box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+  margin: 0;
+}
+nav .logo {
+  font-size: 1.rem;
+  width: 35px;
+  display: flex;
+  position: relative;
+  margin-left: -50px;
+  top: -10px;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .logo img {
+  padding-top: 10px;
+  width: 40px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial;
+  padding: 5px 10px;
+  font-weight: bold;
+  transition: 0.15s;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #036635 ;
+}
+
+#nav-button {
+  display: none;
+  width: 200px;
+}
+
+label {
+  display: none;
+}
+
+header img {
+padding: 100px 0px;
+box-sizing: border-box;
+top: 60px;
+position: static;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
+/* responsive */
+
+@media only screen and (max-width: 736px) and (orientation: portrait) {
+
+  nav {
+      align-items: center;
+  }
+
+  nav .logo {
+      width: 40%;
+      position: absolute;
+      left: 50px;
+  }
+
+  nav .logo img {
+      padding-top: 20px;
+  }
+
+  nav ul {
+      position: fixed;
+      top: 50px;
+      width: 100%;
+      background: #ffff ;
+      max-height: 0;
+      overflow: hidden;
+  }
+
+  nav li {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #ffff;
+  }
+
+  nav a {
+      width: 100%;
+      display: block;
+  }
+  
+  nav li:hover {
+      background: #f0f0f0;
+  }
+
+  label {
+      display: block;
+      padding: 0px 10px;
+      font-size: 30px;
+      cursor: pointer;
+      position: absolute;
+      right: 2%;
+  }
+
+  label:hover {
+      color: #036635 ;
+  }
+
+  nav #nav-button:checked~ul {
+      max-height: 100%;
+      transition: all is ease-out;
+  }
+}
+.aboutus {
+    width: 80%;
+    position: relative;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    background: #ebdbc8;
+    gap: 1rem;
+}
+img {
+    margin-right: 30px;
+    width: 300px;
+    height: auto;
+}
+.heading{
+  width: 100%;
+  display: flax;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 80px;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: #ebdbc8;
+}
+  .heading h1 {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  margin-top: 50px;
+  }
+ .heading h2 {
+  font-size: 1.2rem;
+  color: var(--second-color);
+  margin-bottom: 20px;
+  margin-top: 13px;
+ }
+ .heading p {
+  font-size: 18px;
+  color: var(--second-color);
+  margin-bottom: 25px;
+  margin-top: 15px;
+  text-align: justify;
+  margin: 0.5rem 0 1rem;
+  font-family: 'Playfair Display', serif;
+ }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.aboutus-img {
+  flex: 1 1 18rem;
+}
+.aboutus-text {
+  flex: 1 1 10rem;
+}
+.about-heading{
+  width: 100%;
+  display: flax;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 65px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+img {
+    margin-right: 30px;
+    width: 300px;
+    height: auto;
+}
+  .about-heading h1{
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.about-img {
+  flex: 1 1 18rem;
+}
+.about-text {
+  flex: 1 1 18rem;
+}
+.about-text h2 {
+  font-size: 1.5rem;
+  color: var(--second-color);
+  font-family: 'Arial', sans-serif;
+}
+.about-text p {
+  font-size: 18px;
+  margin: 0.5rem 0 1rem;
+  text-align: justify;
+  font-family: 'Playfair Display', serif;
+}
+.about-text span {
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+}
+ /* Gaya CSS untuk ikon sosial media */
+ .social-media-icons {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    height: 60px;
+    margin-top: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-media-icons li {
+    display:inline;
+    margin: 0px 10px;
+  }
+  
+  .social-media-icons img {
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+  }
+
+  /* Gaya CSS untuk footer */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+  }
+  
+  footer {
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: flex;
+    font-size: 5px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 12px;
+  }
+  /* Styling for mobile devices */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav ul {
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom:20px;
+  }
+  nav ul li {
+    margin-bottom: 20px;
+  }
+  
+  /* Label */
+  label {
+    margin-right: 0;
+  }
+
+  header img {
+      padding: 80px 0;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1025px) {
+  nav .logo {
+      width: 30%;
+      left: 60px;
+  }
+
+  nav .logo img {
+      padding-top: 25px;
+  }
+
+  nav ul {
+      top: 40px;
+  }
+
+  nav li {
+      padding: 12px;
+  }
+
+  label {
+      font-size: 36px;
+      right: 2%;
+  }
+
+  header img {
+      padding: 120px 0;
+  }
+}
